@@ -4,6 +4,15 @@ module.exports = {
     range: range,
 };
 
+function first(ary, predicate) {
+    var len = ary.len;
+    for (var i = 0; i < len; i++) {
+        if (predicate(ary[i])) {
+            return ary[i];
+        }
+    }
+}
+
 
 function isArray(o) {
     return Object.prototype.toString.call(o) === "[object Array]";
