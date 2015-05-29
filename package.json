@@ -1,0 +1,23 @@
+{
+  "name": "boots-utils",
+  "version": "0.1.0",
+  "description": "i find these functions quite helpful",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brettimus/boots-utils.git"
+  },
+  "keywords": [
+    "utilities",
+    "personalstuff"
+  ],
+  "author": "boots <brbeut@gmail.com> (http://brettim.us/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brettimus/boots-utils/issues"
+  },
+  "homepage": "https://github.com/brettimus/boots-utils#readme"
+}
