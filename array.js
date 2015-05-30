@@ -12,10 +12,10 @@ module.exports = {
  * @param {function} predicate
  * @return {*}
  */
-function first(ary, predicate) {
+function first(ary, predicate, context) {
     var len = ary.len;
     for (var i = 0; i < len; i++) {
-        if (predicate(ary[i])) {
+        if (predicate.call(context, ary[i])) {
             return ary[i];
         }
     }

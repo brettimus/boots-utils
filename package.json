@@ -1,6 +1,6 @@
 {
   "name": "boots-utils",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "i find these functions quite helpful",
   "main": "index.js",
   "scripts": {

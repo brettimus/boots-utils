@@ -9,17 +9,18 @@ module.exports = {
  * @param {function} success
  * @param {function} error
  */
-function loadJSON(path, success, error) {
+function loadJSON(path, success, error, context) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
+        context = context || this;
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
                 if (success) {
-                    success(JSON.parse(xhr.responseText));
+                    success.call(context, JSON.parse(xhr.responseText));
                 }
             } else {
                 if (error) {
-                    error(xhr);
+                    error.call(context, xhr);
                 }
             }
         }
