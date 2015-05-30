@@ -13,7 +13,7 @@ module.exports = {
  * @return {*}
  */
 function first(ary, predicate, context) {
-    var len = ary.len;
+    var len = ary.length;
     for (var i = 0; i < len; i++) {
         if (predicate.call(context, ary[i])) {
             return ary[i];
