@@ -1,9 +1,17 @@
 module.exports = {
     first: first,
     isArray: isArray,
+    randomInArray: randomInArray,
     range: range,
 };
 
+/**
+ * Returns first element of array to return true in the given predicate function.
+ * @function isArray
+ * @param {array} ary
+ * @param {function} predicate
+ * @return {*}
+ */
 function first(ary, predicate) {
     var len = ary.len;
     for (var i = 0; i < len; i++) {
@@ -13,7 +21,11 @@ function first(ary, predicate) {
     }
 }
 
-
+/**
+ * @function isArray
+ * @param {*} o
+ * @return {boolean}
+ */
 function isArray(o) {
     return Object.prototype.toString.call(o) === "[object Array]";
 }
@@ -30,4 +42,14 @@ function range(start, end, step) {
     var result = [];
     for (;start <= end; start += step) result.push(start);
     return result;
+}
+
+/**
+ * 
+ * @function randomInArray
+ * @param {array} ary
+ * @return {*}
+ */
+function randomInArray(ary) {
+    return ary[Math.floor(Math.random() * ary.length)];
 }
