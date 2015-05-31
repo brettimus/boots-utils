@@ -4,6 +4,11 @@ module.exports = {
     extend: extend,
     nully: nully,
     replaceAll: replaceAll,
+    test: {
+        assert: function(bool, message) {
+            if (!bool) console.log(message);
+        }
+    }
 };
 
 /**
