@@ -2,6 +2,7 @@ module.exports = {
     ajax: require("./ajax"),
     array: require("./array"),
     extend: extend,
+    nTimes: nTimes,
     nully: nully,
     replaceAll: replaceAll,
     test: {
@@ -10,6 +11,13 @@ module.exports = {
         }
     }
 };
+
+
+function nTimes(n, fun) {
+    var counter = n;
+    if (n <= 0) return;
+    while (counter--) fun(n - counter);
+}
 
 /**
  * Tests whether value is null or undefined
